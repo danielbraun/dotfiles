@@ -6,3 +6,6 @@ set shiftwidth=4
 set expandtab 
 let g:netrw_list_hide='.*\.pyc$'
 colorscheme molokai
+let g:netrw_liststyle = 3
+set cursorline
+

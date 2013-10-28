@@ -10,6 +10,7 @@ Bundle 'danielbraun/vim-autoformat'
 Bundle 'jmcantrell/vim-virtualenv'
 Bundle 'airblade/vim-gitgutter'
 Bundle "einars/js-beautify"
+Bundle 'groenewege/vim-less'
 
 syntax enable
 filetype plugin indent on

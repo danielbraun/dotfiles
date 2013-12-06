@@ -11,6 +11,9 @@ Bundle 'jmcantrell/vim-virtualenv'
 Bundle 'airblade/vim-gitgutter'
 Bundle "einars/js-beautify"
 Bundle 'groenewege/vim-less'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'aaronj1335/underscore-templates.vim'
+Bundle 'gorodinskiy/vim-coloresque'
 
 syntax enable
 filetype plugin indent on

@@ -5,8 +5,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
-Bundle 'danielbraun/vim-autoformat'
-Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'chiel92/vim-autoformat'
 Bundle "einars/js-beautify"
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
@@ -19,8 +18,6 @@ Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'myhere/vim-nodejs-complete'
 Bundle 'pangloss/vim-javascript'
 Bundle 'moll/vim-node'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'lambdalisue/vim-django-support'
 
 syntax enable
 filetype plugin indent on
@@ -31,3 +28,4 @@ colo zenburn
 let g:syntastic_check_on_open = 1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_aggregate_errors = 1
+let g:syntastic_javascript_checkers = ['jslint', 'jshint', 'eslint']

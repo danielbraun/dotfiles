@@ -19,13 +19,16 @@ Bundle 'mxw/vim-jsx'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jmcantrell/vim-virtualenv'
 Bundle 'wakatime/vim-wakatime'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-fireplace'
 
 syntax enable
 filetype plugin indent on
 set ts=8 et sw=4 sts=4
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
-colo molokai
+colo solarized
+set background=light
 set colorcolumn=80
 set cursorline
 set autoread
@@ -40,6 +43,7 @@ let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchain
 au BufNewFile,BufRead *.h set filetype=objc
 au BufNewFile,BufRead *.m set filetype=objc
 au BufNewFile,BufRead Podfile set filetype=ruby
+au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 
 
 " add a definition for Objective-C to tagbar

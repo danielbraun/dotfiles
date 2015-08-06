@@ -29,6 +29,13 @@ filetype plugin indent on
 set ts=8 et sw=4 sts=4
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
+
+let hour = strftime("%H")
+if 6 <= hour && hour < 18
+    set background=light
+else
+    set background=dark
+endif
 colo solarized
 
 set colorcolumn=80

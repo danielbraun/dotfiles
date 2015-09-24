@@ -1,0 +1,4 @@
+Host danny-machine-1
+        HostName 54.74.48.200
+        User ubuntu
+        LocalForward 9000 127.0.0.1:9000

@@ -4,23 +4,24 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'chiel92/vim-autoformat'
-Plugin 'groenewege/vim-less'
-Plugin 'kchmck/vim-coffee-script'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'groenewege/vim-less'
+Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'jnurmine/Zenburn'
-Plugin 'tomasr/molokai'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'majutsushi/tagbar'
+Plugin 'moll/vim-node'
+Plugin 'mxw/vim-jsx'
 Plugin 'myhere/vim-nodejs-complete'
 Plugin 'pangloss/vim-javascript'
-Plugin 'moll/vim-node'
-Plugin 'majutsushi/tagbar'
-Plugin 'mxw/vim-jsx'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/syntastic'
+Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
@@ -45,7 +46,7 @@ set nu
 let g:syntastic_check_on_open = 1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_javascript_checkers = ['jsxhint']
+"let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_python_checkers = ['python', 'pep8', 'flake8', 'pyflakes']
 let g:syntastic_objc_check_header = 1
 au BufNewFile,BufRead *.h set filetype=objc

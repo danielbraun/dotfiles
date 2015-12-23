@@ -22,6 +22,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/paredit.vim'
+Plugin 'guns/vim-clojure-static'
+Plugin 'Dinduks/vim-holylight'
 
 call vundle#end()
 
@@ -32,13 +35,8 @@ autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 
 let hour = strftime("%H")
-if 6 <= hour && hour < 18
-    set background=light
-else
-    set background=dark
-endif
 colo solarized
-
+let mapleader=","  
 set colorcolumn=80
 set cursorline
 set autoread

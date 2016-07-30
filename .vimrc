@@ -18,11 +18,22 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/paredit.vim'
+"Plugin 'vim-scripts/paredit.vim'
 Plugin 'guns/vim-clojure-static'
+"Plugin 'guns/vim-clojure-highlight'
+"Plugin 'Dinduks/vim-holylight'
+"Plugin 'mhinz/vim-signify'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'venantius/vim-cljfmt'
+
+Plugin 'guns/vim-sexp'
+Plugin 'tpope/vim-sexp-mappings-for-regular-people'
+Plugin 'tpope/vim-repeat'
+
+Plugin 'hsanson/vim-android'
+
+Plugin 'tpope/vim-fugitive'
 
 "Plugin 'venantius/vim-eastwood'
 "Plugin 'tpope/vim-dispatch'
@@ -36,9 +47,10 @@ syntax enable
 set ts=8 et sw=4 sts=4
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
+let g:rehash256 = 1 " molokai options
 
 set bg=dark
-colo zenburn
+colo solarized
 set noswapfile
 let mapleader=","
 set colorcolumn=80
@@ -54,5 +66,9 @@ au BufNewFile,BufRead *.m set filetype=objc
 au BufNewFile,BufRead Podfile set filetype=ruby
 au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 au BufNewFile,BufRead *.boot set filetype=clojure
+au BufWritePost *.clj %Ev
 
-nmap <CR> mZcpip`Z
+let g:android_sdk_path = "/Users/danielbraun/Library/Android/sdk/platforms/android-23/"
+
+nnoremap Q <nop>
+"nnoremap <CR> :Ev<CR>

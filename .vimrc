@@ -54,6 +54,7 @@ colo solarized
 set noswapfile
 let mapleader=","
 set colorcolumn=80
+set ignorecase
 set cursorline
 let g:clj_fmt_autosave = 0
 let g:syntastic_check_on_open = 0
@@ -66,8 +67,7 @@ au BufNewFile,BufRead *.m set filetype=objc
 au BufNewFile,BufRead Podfile set filetype=ruby
 au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 au BufNewFile,BufRead *.boot set filetype=clojure
-au BufWritePost *.clj %Ev
-
+au BufNewFile,BufRead *.clj nnoremap <CR> :Ev<CR>
 let g:android_sdk_path = "/Users/danielbraun/Library/Android/sdk/platforms/android-23/"
 
 nnoremap Q <nop>

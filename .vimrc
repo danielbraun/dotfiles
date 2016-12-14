@@ -26,6 +26,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'venantius/vim-cljfmt'
+Plugin 'tpope/vim-vinegar'
 
 Plugin 'guns/vim-sexp'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
@@ -51,6 +52,7 @@ let g:rehash256 = 1 " molokai options
 
 set bg=dark
 colo solarized
+set t_ut= "Fixed bg redrawing with xterm-256color
 set noswapfile
 let mapleader=","
 set colorcolumn=80

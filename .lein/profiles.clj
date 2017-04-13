@@ -1,5 +1,15 @@
-{:user {:plugins [[cider/cider-nrepl "0.12.0"]
-                  [lein-cljfmt "0.5.3"]
-                  [lein-try "0.4.3"]]}}
+{:user {:plugins [[cider/cider-nrepl "RELEASE"]
+                  [lein-cljfmt "RELEASE"]
+                  [lein-hiera  "RELEASE"]
+                  [quickie "RELEASE"]
+                  [lein-try "RELEASE"]
+                  [lein-plz "RELEASE"]
+                  [lein-cloverage "RELEASE"]]
+        :dependencies [ [cljfmt "RELEASE"]
+                       [jonase/eastwood "RELEASE"]
+                       [com.cemerick/piggieback  "0.2.1"]
+                       [slamhound "RELEASE"]
+                       [org.clojure/tools.nrepl  "RELEASE"]]
+        :repl-options  {:nrepl-middleware  [cemerick.piggieback/wrap-cljs-repl]}}}
 
 

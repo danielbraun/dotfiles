@@ -71,5 +71,5 @@ au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 au BufNewFile,BufRead *.boot set filetype=clojure
 au BufNewFile,BufRead *.clj* nnoremap <CR> :Ev<CR>
 autocmd BufWritePost ~/.vimrc so %
-autocmd BufWritePost *_test.clj silent RunTests
+autocmd BufWritePost *_test.clj* silent RunTests
 nnoremap Q <nop>

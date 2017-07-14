@@ -40,6 +40,8 @@ Plugin 'venantius/vim-eastwood'
 "Plugin 'tpope/vim-dispatch'
 "Plugin 'tpope/vim-projectionist'
 "Plugin 'tpope/vim-salve'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'jaxbot/github-issues.vim'
 
 call vundle#end()
 
@@ -63,6 +65,7 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_python_checkers = ['python', 'pep8', 'flake8', 'pyflakes']
 "let g:syntastic_clojure_checkers = ['eastwood']
+let g:syntastic_typescript_checkers = ['tslint']
 let g:syntastic_objc_check_header = 1
 au BufNewFile,BufRead *.h set filetype=objc
 au BufNewFile,BufRead *.m set filetype=objc

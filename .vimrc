@@ -57,6 +57,7 @@ set noswapfile
 set colorcolumn=80
 set ignorecase
 set cursorline
+set completeopt-=preview "Disable preview when on omnicompletion
 let g:clj_fmt_autosave = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_always_populate_loc_list=1

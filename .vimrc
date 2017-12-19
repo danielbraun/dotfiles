@@ -41,7 +41,6 @@ Plugin 'venantius/vim-eastwood'
 "Plugin 'tpope/vim-projectionist'
 "Plugin 'tpope/vim-salve'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'jaxbot/github-issues.vim'
 
 call vundle#end()
 
@@ -59,7 +58,7 @@ set noswapfile
 set colorcolumn=80
 set ignorecase
 set cursorline
-set completeopt-=preview "Disable preview when on omnicompletion
+"set completeopt+=preview "Disable preview when on omnicompletion
 let g:clj_fmt_autosave = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_always_populate_loc_list=1
@@ -73,7 +72,9 @@ au BufNewFile,BufRead *.m set filetype=objc
 au BufNewFile,BufRead Podfile set filetype=ruby
 au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 au BufNewFile,BufRead *.boot set filetype=clojure
+au BufEnter *.edn set filetype=clojure
 au BufNewFile,BufRead *.clj* nnoremap <CR> :Ev<CR>
+au BufNewFile,BufRead project.clj pedit ~/.clojars.edn
 autocmd BufWritePost ~/.vimrc so %
 autocmd BufWritePost *_test.clj* silent RunTests
 nnoremap Q <nop>

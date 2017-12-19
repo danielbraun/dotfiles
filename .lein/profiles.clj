@@ -1,17 +1,17 @@
-{:user {:plugins [[cider/cider-nrepl "RELEASE"]
-                  [lein-cljfmt "RELEASE"]
-                  [lein-hiera  "RELEASE"]
-                  [lein-heroku "RELEASE"]
-                  [quickie "RELEASE"]
-                  [lein-try "RELEASE"]
-                  [lein-ring "RELEASE"]
-                  [lein-plz "RELEASE"]
-                  [lein-cloverage "RELEASE"]]
-        :dependencies [ [cljfmt "RELEASE"]
+{:user {:plugins [
+                  #_[lein-cljfmt "RELEASE"]
+                  #_[lein-hiera  "RELEASE"]
+                  #_[lein-heroku "RELEASE"]
+                  #_[lein-pprint "1.2.0"]
+                  #_[quickie "RELEASE"]
+                  #_[lein-try "RELEASE"]
+                  #_[lein-ring "RELEASE"]
+                  #_[lein-plz "RELEASE"]
+                  #_[lein-cloverage "RELEASE"]]
+        :dependencies [[cljfmt "RELEASE"]
+                       [cider/cider-nrepl "RELEASE"]
+                       [binaryage/devtools "RELEASE"]
                        [jonase/eastwood "RELEASE"]
-                       [com.cemerick/piggieback  "0.2.1"]
+                       [com.cemerick/piggieback "RELEASE"]
                        [slamhound "RELEASE"]
-                       [org.clojure/tools.nrepl  "RELEASE"]]
-        :repl-options  {:nrepl-middleware  [cemerick.piggieback/wrap-cljs-repl]}}}
-
-
+                       [org.clojure/tools.nrepl "RELEASE"]]}}

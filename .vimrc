@@ -73,7 +73,7 @@ au BufNewFile,BufRead Podfile set filetype=ruby
 au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 au BufNewFile,BufRead *.boot set filetype=clojure
 au BufEnter *.edn set filetype=clojure
-au BufNewFile,BufRead *.clj* nnoremap <CR> :Ev<CR>
+au BufNewFile,BufRead *.clj* nnoremap <buffer> <CR> :Ev<CR>
 au BufNewFile,BufRead project.clj pedit ~/.clojars.edn
 autocmd BufWritePost ~/.vimrc so %
 autocmd BufWritePost *_test.clj* silent RunTests

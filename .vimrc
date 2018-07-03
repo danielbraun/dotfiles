@@ -42,6 +42,8 @@ Plugin 'venantius/vim-eastwood'
 "Plugin 'tpope/vim-salve'
 Plugin 'leafgarland/typescript-vim'
 
+Plugin 'joshdick/onedark.vim'
+
 call vundle#end()
 
 filetype plugin indent on

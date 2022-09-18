@@ -1,4 +1,4 @@
-{
+{:paths ["/Users/danielbraun/src/"]
  :deps {clj-pdf {:mvn/version "2.5.7"}
         camel-snake-kebab {:mvn/version "0.4.2"}
         com.googlecode.ez-vcard/ez-vcard {:mvn/version "0.11.2"}
@@ -12,6 +12,10 @@
         cheshire {:mvn/version "5.10.0"}
         clojurewerkz/money {:mvn/version "1.10.0"}
         clj-ical/clj-ical {:mvn/version "1.1"}
+        clj-serial {:mvn/version "2.0.5"}
+        clj-firmata {:mvn/version "2.1.1"
+                     :exclusions [clj-serial]}
+
         clj-http {:mvn/version "3.10.1"}
         clj-postgresql {:mvn/version "0.7.0"}
         com.auth0/java-jwt {:mvn/version "3.12.0"}
@@ -34,12 +38,10 @@
         hiccup {:mvn/version "2.0.0-alpha2"}
         hickory {:mvn/version "0.7.1"}
         honeysql {:mvn/version "1.0.444"}
-
         incanter                     {:mvn/version "1.9.3"}
         com.lowagie/itext            {:mvn/version "2.1.7"
                                       :exclusions  [bouncycastle/bctsp-jdk14]}
         org.bouncycastle/bctsp-jdk14 {:mvn/version "1.38"}
-
         org.mnode.ical4j/ical4j {:mvn/version "1.0.2"}
         integrant/integrant {:mvn/version "0.8.0"}
         io.forward/clojure-mail {:mvn/version "1.0.8"}
@@ -58,7 +60,8 @@
         ring/ring-defaults {:mvn/version "0.3.2"}
         semantic-csv/semantic-csv {:mvn/version "0.2.1-alpha1"}
         nrepl/drawbridge {:mvn/version "0.2.1"}
-        com.github.seancorfield/depstar {:mvn/version "2.1.278"}}
+        com.github.seancorfield/depstar {:mvn/version "2.1.278"}
+        uberdeps/uberdeps {:mvn/version "1.1.4"}}
  :aliases {
            :batteries {:extra-deps {}}
            :nREPL {:extra-deps {cider/cider-nrepl {:mvn/version "0.25.2"}

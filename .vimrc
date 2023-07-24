@@ -108,3 +108,5 @@ autocmd BufWritePost ~/.vimrc so %
 nnoremap Q <nop>
 " au BufWrite *.js :Autoformat
 set visualbell t_vb=
+set noswapfile
+set encoding=utf-8

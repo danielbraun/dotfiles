@@ -11,6 +11,8 @@ set mouse=a
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'tpope/vim-vinegar'
+
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
@@ -42,7 +44,6 @@ Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'guns/vim-slamhound'
 
 " Testing
-Plugin 'janko-m/vim-test'
 call vundle#end()
 
 filetype plugin indent on

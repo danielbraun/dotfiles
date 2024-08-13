@@ -2,15 +2,33 @@ call plug#begin()
 	Plug 'jnurmine/Zenburn'
 	Plug 'tomasr/molokai'
 	Plug 'foxbunny/vim-amber'
+	Plug 'vim-syntastic/syntastic'
+	Plug 'tpope/vim-surround'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'tpope/vim-commentary'
 call plug#end()
 syntax enable
-"syntax on
-set guifont=Consolas:h11
+"set guifont=Consolas:h16
+set guioptions+=k
+
 augroup vimrc
 	autocmd!
-	autocmd BufWritePost vimrc source %
+	autocmd BufWritePost .vimrc source %
 	autocmd BufNewFile,BufRead *.clj vnoremap <buffer> <CR> :call term_list()[0]->term_sendkeys(@. .. "<C-v><CR>") <CR>
 augroup END
+
+augroup xml
+	autocmd!
+	autocmd FileType xml,xslt setlocal formatexpr= formatprg=tidy\ -xml\ -indent\ -q
+augroup END
+
+set scrolloff=1
+set autoread
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+
 nnoremap <C-s> :w<cr>
 tnoremap <C-u> <C-w>N<C-u>
-colorscheme blue
+colo molokai

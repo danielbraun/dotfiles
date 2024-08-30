@@ -6,6 +6,9 @@ call plug#begin()
 	Plug 'tpope/vim-surround'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'tpope/vim-commentary'
+	Plug 'vim-autoformat/vim-autoformat'
+	Plug 'tpope/vim-vinegar'
+	Plug 'entrez/roku.vim'
 call plug#end()
 syntax enable
 "set guifont=Consolas:h16
@@ -17,17 +20,30 @@ augroup vimrc
 	autocmd BufNewFile,BufRead *.clj vnoremap <buffer> <CR> :call term_list()[0]->term_sendkeys(@. .. "<C-v><CR>") <CR>
 augroup END
 
-augroup xml
+augroup filetypes
 	autocmd!
+	autocmd FileType brs setl nofoldenable "Disable folding
+	autocmd FileType sh nnoremap <buffer> <CR> :!sh %<CR>
+
+	function FormatSh()
+		:%s/ \(-\+\)/ \\\r\t\1/g
+	endfunction
+	
+	autocmd FileType sh setlocal formatexpr=FormatSh()
 	autocmd FileType xml,xslt setlocal formatexpr= formatprg=tidy\ -xml\ -indent\ -q
+	autocmd FileType clojure setlocal formatprg=cljfmt\ fix\ -\ --split-keypairs-over-multiple-lines\ --remove-multiple-non-indenting-spaces\ --quiet
 augroup END
 
 set scrolloff=1
 set autoread
+set autowrite
+set go+=! " Fix terminal output colors
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
+
+set ts=4 sw=4
 
 nnoremap <C-s> :w<cr>
 tnoremap <C-u> <C-w>N<C-u>

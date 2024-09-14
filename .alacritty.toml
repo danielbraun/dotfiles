@@ -1,0 +1,10 @@
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt",     chars = "\u001BF" },
+  { key = "Left",  mods = "Alt",     chars = "\u001BB" },
+  { key = "s",     mods = "Command", chars = "\u0013" },
+  { key = "t",     mods = "Command", chars = "\u0014" },
+  { key = "w",     mods = "Command", chars = ":q\n" },
+  { key = 33, mods = "Command | Shift", chars = "gT" },
+  { key = 30, mods = "Command | Shift", chars = "gt" }
+]

@@ -24,7 +24,6 @@ augroup END
 augroup filetypes
 	autocmd!
 	autocmd FileType brs setl nofoldenable "Disable folding
-	autocmd FileType sh nnoremap <buffer> <CR> :!sh %<CR>
 	autocmd FileType sh nnoremap <buffer> <CR> :!zsh %<CR>
 
 	function FormatSh()

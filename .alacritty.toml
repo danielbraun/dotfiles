@@ -9,3 +9,6 @@ bindings = [
   { key = 30, mods = "Command | Shift", chars = "gt" },
   { key = "Tab" , mods = "Control", chars = ":tabnext #\n" }
 ]
+
+[cursor]
+style = {blinking = "Always"}

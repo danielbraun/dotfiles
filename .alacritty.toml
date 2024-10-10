@@ -12,3 +12,6 @@ bindings = [
 
 [cursor]
 style = {blinking = "Always"}
+
+[bell]
+command = { program = "osascript", args = ["-e", "beep"] }

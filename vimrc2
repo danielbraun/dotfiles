@@ -24,7 +24,7 @@ augroup END
 augroup filetypes
 	autocmd!
 	autocmd FileType brs setl nofoldenable "Disable folding
-	autocmd FileType sh nnoremap <buffer> <CR> :!zsh %<CR>
+	autocmd FileType sh nnoremap <buffer> <CR> :!sh %<CR>
 
 	function FormatSh()
 		:%s/ \(-\+\)/ \\\r\t\1/g
@@ -53,3 +53,4 @@ nnoremap <C-t> :tabe<cr>
 tnoremap <C-u> <C-w>N<C-u>
 colo molokai
 set mouse=a
+noswapfile

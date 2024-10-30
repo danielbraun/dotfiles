@@ -19,17 +19,18 @@ augroup vimrc
 	autocmd!
 	autocmd BufWritePost .vimrc source %
 	autocmd BufNewFile,BufRead *.clj vnoremap <buffer> <CR> :call term_list()[0]->term_sendkeys(@. .. "<C-v><CR>") <CR>
+	autocmd VimResized * wincmd =
 augroup END
 
 augroup filetypes
 	autocmd!
 	autocmd FileType brs setl nofoldenable "Disable folding
-	autocmd FileType sh nnoremap <buffer> <CR> :!sh %<CR>
+	autocmd FileType sh nnoremap <buffer> <CR> :!bash %<CR>
+	autocmd FileType sql nnoremap <buffer> <CR> :silent !psql < % > out.txt 2>&1<CR>:redraw!<CR>
 
 	function FormatSh()
 		:%s/ \(-\+\)/ \\\r\t\1/g
 	endfunction
-	
 	autocmd BufWritePost .tmux.conf silent !tmux source-file %
 	autocmd FileType sh setlocal formatexpr=FormatSh()
 	autocmd FileType xml,xslt setlocal formatexpr= formatprg=tidy\ -xml\ -indent\ -q
@@ -51,6 +52,7 @@ set ts=4 sw=4
 nnoremap <C-s> :w<cr>
 nnoremap <C-t> :tabe<cr>
 tnoremap <C-u> <C-w>N<C-u>
-colo molokai
+colo zenburn
 set mouse=a
 noswapfile
+let g:ftplugin_sql_omni_key = '<C-j>'

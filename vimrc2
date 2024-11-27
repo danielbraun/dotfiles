@@ -10,6 +10,7 @@ call plug#begin()
 	Plug 'bronson/vim-trailing-whitespace'
 	Plug 'tpope/vim-vinegar'
 	Plug 'entrez/roku.vim'
+	Plug 'jparise/vim-graphql'
 call plug#end()
 syntax enable
 "set guifont=Consolas:h16

@@ -9,6 +9,7 @@ call plug#begin()
 	Plug 'tpope/vim-sexp-mappings-for-regular-people'
 	Plug 'tpope/vim-repeat'
 
+	Plug 'tpope/vim-fugitive'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'tpope/vim-commentary'
 	Plug 'vim-autoformat/vim-autoformat'
@@ -33,8 +34,8 @@ augroup END
 augroup filetypes
 	autocmd!
 	autocmd FileType brs setl nofoldenable "Disable folding
-	autocmd FileType sh nnoremap <buffer> <CR> :!bash %<CR>
-	autocmd FileType sql nnoremap <buffer> <CR> :silent !psql < % > out.txt 2>&1<CR>:redraw!<CR>
+	"autocmd FileType sh nnoremap <buffer> <CR> :!bash %<CR>
+	"autocmd FileType sql nnoremap <buffer> <CR> :silent !psql < % > out.txt 2>&1<CR>:redraw!<CR>
 
 	function FormatSh()
 		:%s/ \(-\+\)/ \\\r\t\1/g
@@ -57,10 +58,13 @@ let g:syntastic_check_on_open = 1
 
 set ts=4 sw=4
 
+nnoremap <cr> :!!<cr>:redraw!<cr>
 nnoremap <C-s> :w<cr>
 nnoremap <C-t> :tabe<cr>
 tnoremap <C-u> <C-w>N<C-u>
+" nnoremap <C-1> 1gt
 colo zenburn
 set mouse=a
 noswapfile
 let g:ftplugin_sql_omni_key = '<C-j>'
+set wildmode=longest,list

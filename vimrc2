@@ -3,7 +3,7 @@ call plug#begin()
 	Plug 'tomasr/molokai'
 	Plug 'foxbunny/vim-amber'
 	Plug 'vim-syntastic/syntastic'
-	
+
 	Plug 'tpope/vim-surround'
 	Plug 'guns/vim-sexp'
 	Plug 'tpope/vim-sexp-mappings-for-regular-people'
@@ -58,7 +58,8 @@ let g:syntastic_check_on_open = 1
 
 set ts=4 sw=4
 
-nnoremap <cr> :!!<cr>:redraw!<cr>
+"nnoremap <cr> :!!<cr>:redraw!<cr>
+nnoremap <cr> :!!<cr>
 nnoremap <C-s> :w<cr>
 nnoremap <C-t> :tabe<cr>
 tnoremap <C-u> <C-w>N<C-u>
@@ -67,4 +68,6 @@ colo zenburn
 set mouse=a
 noswapfile
 let g:ftplugin_sql_omni_key = '<C-j>'
-set wildmode=longest,list
+"set wildmode=longest,list
+set cursorline
+set nomagic " disable regex in /

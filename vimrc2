@@ -71,3 +71,6 @@ let g:ftplugin_sql_omni_key = '<C-j>'
 "set wildmode=longest,list
 set cursorline
 set nomagic " disable regex in /
+
+nmap n nzz
+nmap p pzz

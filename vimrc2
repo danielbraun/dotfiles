@@ -77,3 +77,5 @@ set nomagic " disable regex in /
 set shell=/bin/bash
 set splitright
 let g:netrw_list_hide= netrw_gitignore#Hide()
+nmap n nzz
+nmap p pzz

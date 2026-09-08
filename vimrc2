@@ -61,6 +61,9 @@ set ts=4 sw=4
 "nnoremap <cr> :!!<cr>:redraw!<cr>
 nnoremap <cr> :!!<cr>
 nnoremap <C-s> :w<cr>
+nnoremap <Leader><CR> :!time make %<cr>
+nnoremap <Leader>. :vs %:r:r:r:r:r.
+nnoremap <Leader>f viWhy:new <C-r>"<cr>
 nnoremap <C-t> :tabe<cr>
 tnoremap <C-u> <C-w>N<C-u>
 " nnoremap <C-1> 1gt
@@ -71,3 +74,6 @@ let g:ftplugin_sql_omni_key = '<C-j>'
 "set wildmode=longest,list
 set cursorline
 set nomagic " disable regex in /
+set shell=/bin/bash
+set splitright
+let g:netrw_list_hide= netrw_gitignore#Hide()
